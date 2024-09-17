@@ -46,5 +46,25 @@ namespace Negocio
         {
             persona.Eliminar2(Id_experiencia);
         }
+
+        //Tabla 3
+        public DataTable Mostrar_Tabla3()
+        {
+            DataTable TB = new DataTable();
+            TB = persona.Mostar_tabla3();
+            return TB;
+        }
+        public void Digitar3(string Centro, string Estudio, string Nivel, string F_inicio, string Estado, string F_final)
+        {
+            persona.Insertar3(Centro, Estudio, Nivel, F_inicio, Estado, F_final);
+        }
+        public void Diferente3(int Id_cursos, string Centro, string Estudio, string Nivel, string F_inicio, string Estado, string F_final)
+        {
+            persona.Cambiar3(Id_cursos, Centro, Estudio, Nivel, F_inicio, Estado, F_final);
+        }
+        public void Borrar3(int Id_cursos)
+        {
+            persona.Eliminar3(Id_cursos);
+        }
     }
 }
