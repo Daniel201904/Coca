@@ -16,5 +16,12 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void experienciaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Experiencia XP = new Experiencia();
+            XP.Show();
+            XP.MdiParent = this;
+        }
     }
 }

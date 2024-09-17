@@ -58,6 +58,12 @@
     <Compile Include="Datos_Personales.Designer.cs">
       <DependentUpon>Datos_Personales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Experiencia.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Experiencia.Designer.cs">
+      <DependentUpon>Experiencia.cs</DependentUpon>
+    </Compile>
     <Compile Include="Iniciar_Sesion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,6 +83,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Datos_Personales.resx">
       <DependentUpon>Datos_Personales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Experiencia.resx">
+      <DependentUpon>Experiencia.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Iniciar_Sesion.resx">
       <DependentUpon>Iniciar_Sesion.cs</DependentUpon>
