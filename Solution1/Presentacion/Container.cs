@@ -37,5 +37,12 @@ namespace Presentacion
             EX.Show();
             EX.MdiParent = this;
         }
+
+        private void conocerteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Conocimiento CO = new Conocimiento();
+            CO.Show();
+            CO.MdiParent = this;
+        }
     }
 }

@@ -344,5 +344,97 @@ namespace Persistencia
                 comando.Connection = conexion.Cerrar_conexion();
             }
         }
+
+        //Datos de la quinta tabla 
+        public DataTable Mostar_tabla5()
+        {
+            SqlDataReader leer;
+            DataTable tabla = new DataTable();
+
+            comando.Connection = conexion.Abrir_conexion();
+
+            comando.CommandText = "select * from Conocimiento";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.Cerrar_conexion();
+
+            return tabla;
+        }
+
+        public void Insertar5(string Puesto_E, decimal Salario, string Idioma, string Programas)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "SP_InsertConocimiento";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@Puesto_E", Puesto_E);
+                comando.Parameters.AddWithValue("@Salario", Salario);
+                comando.Parameters.AddWithValue("@Idioma", Idioma);
+                comando.Parameters.AddWithValue("@Programas", Programas);
+
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
+        public void Cambiar5(int Id_conocimiento, string Puesto_E, decimal Salario, string Idioma, string Programas)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "sp_UpdateConocimiento";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@Id_conocimiento", Id_conocimiento);
+                comando.Parameters.AddWithValue("@Puesto_E", Puesto_E);
+                comando.Parameters.AddWithValue("@Salario", Salario);
+                comando.Parameters.AddWithValue("@Idioma", Idioma);
+                comando.Parameters.AddWithValue("@Programas", Programas);
+
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
+
+        public void Eliminar5(int Id_conocimiento)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "SP_DeleteConocimiento";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Id_conocimiento", Id_conocimiento);
+
+
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
     }
 }
