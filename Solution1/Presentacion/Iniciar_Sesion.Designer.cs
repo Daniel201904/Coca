@@ -1,6 +1,6 @@
 ﻿namespace Presentacion
 {
-    partial class Form1
+    partial class Iniciar_Sesion
     {
         /// <summary>
         /// Variable del diseñador necesaria.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Iniciar_Sesion));
             this.BT_registrar = new System.Windows.Forms.Button();
             this.BT_ingresar = new System.Windows.Forms.Button();
             this.TXT_pasword = new System.Windows.Forms.TextBox();

@@ -11,10 +11,10 @@ using Negocio;
 
 namespace Presentacion
 {
-    public partial class Form1 : Form
+    public partial class Iniciar_Sesion : Form
     {
         NegocioNG usuario = new NegocioNG();
-        public Form1()
+        public Iniciar_Sesion()
         {
             InitializeComponent();
         }
