@@ -64,5 +64,97 @@ namespace Persistencia
                 conexion.Cerrar_conexion();
             }
         }
+
+        //Los datos de la segunda tabla 
+        public DataTable Mostar_tabla2()
+        {
+            SqlDataReader leer;
+            DataTable tabla = new DataTable();
+
+            comando.Connection = conexion.Abrir_conexion();
+
+            comando.CommandText = "select * from Experiencia";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.Cerrar_conexion();
+
+            return tabla;
+        }
+
+        public void Insertar2(string N_empresa, string Cargo, string Area, string Jefe, int Telefono)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "SP_InsertExperiencia";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@N_empresa", N_empresa);
+                comando.Parameters.AddWithValue("@Cargo", Cargo);
+                comando.Parameters.AddWithValue("@Area", Area);
+                comando.Parameters.AddWithValue("@Jefe", Jefe);
+                comando.Parameters.AddWithValue("@Telefono", Telefono);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
+
+        public void Cambiar2(int Id_experiencia, string N_empresa, string Cargo, string Area, string Jefe, int Telefono)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "SP_UpdateExperiencia";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@Id_experiencia", Id_experiencia);
+                comando.Parameters.AddWithValue("@N_empresa", N_empresa);
+                comando.Parameters.AddWithValue("@Cargo", Cargo);
+                comando.Parameters.AddWithValue("@Area", Area);
+                comando.Parameters.AddWithValue("@Jefe", Jefe);
+                comando.Parameters.AddWithValue("@Telefono", Telefono);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
+
+        public void Eliminar2(int Id_experiencia)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+
+                comando.CommandText = "SP_DeleteExperiencia";
+                comando.CommandType = CommandType.StoredProcedure;
+                comando.Parameters.AddWithValue("@Id_experiencia", Id_experiencia);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
     }
 }
