@@ -86,5 +86,25 @@ namespace Negocio
         {
             persona.Eliminar4(Id_Medico);
         }
+
+        //Tabla 5
+        public DataTable Mostrar_Tabla5()
+        {
+            DataTable TB = new DataTable();
+            TB = persona.Mostar_tabla5();
+            return TB;
+        }
+        public void Digitar5(string Puesto_E, decimal Salario, string Idioma, string Programas)
+        {
+            persona.Insertar5(Puesto_E, Salario, Idioma, Programas);
+        }
+        public void Diferente5(int Id_conocimiento, string Puesto_E, decimal Salario, string Idioma, string Programas)
+        {
+            persona.Cambiar5(Id_conocimiento, Puesto_E, Salario, Idioma, Programas);
+        }
+        public void Borrar5(int Id_conocimiento)
+        {
+            persona.Eliminar5(Id_conocimiento);
+        }
     }
 }

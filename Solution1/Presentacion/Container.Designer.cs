@@ -35,6 +35,8 @@
             this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.examenesMedicosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.suExamenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.queremosSaberToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.conocerteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -44,7 +46,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.experienciaDelUsuarioToolStripMenuItem,
             this.cursosRealizadosToolStripMenuItem,
-            this.examenesMedicosToolStripMenuItem});
+            this.examenesMedicosToolStripMenuItem,
+            this.queremosSaberToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -92,9 +95,24 @@
             // suExamenToolStripMenuItem
             // 
             this.suExamenToolStripMenuItem.Name = "suExamenToolStripMenuItem";
-            this.suExamenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.suExamenToolStripMenuItem.Size = new System.Drawing.Size(164, 26);
             this.suExamenToolStripMenuItem.Text = "Su examen";
             this.suExamenToolStripMenuItem.Click += new System.EventHandler(this.suExamenToolStripMenuItem_Click);
+            // 
+            // queremosSaberToolStripMenuItem
+            // 
+            this.queremosSaberToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.conocerteToolStripMenuItem});
+            this.queremosSaberToolStripMenuItem.Name = "queremosSaberToolStripMenuItem";
+            this.queremosSaberToolStripMenuItem.Size = new System.Drawing.Size(145, 24);
+            this.queremosSaberToolStripMenuItem.Text = "¿Queremos saber?";
+            // 
+            // conocerteToolStripMenuItem
+            // 
+            this.conocerteToolStripMenuItem.Name = "conocerteToolStripMenuItem";
+            this.conocerteToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.conocerteToolStripMenuItem.Text = "Conocerte";
+            this.conocerteToolStripMenuItem.Click += new System.EventHandler(this.conocerteToolStripMenuItem_Click);
             // 
             // Container
             // 
@@ -122,5 +140,7 @@
         private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem examenesMedicosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem suExamenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem queremosSaberToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem conocerteToolStripMenuItem;
     }
 }

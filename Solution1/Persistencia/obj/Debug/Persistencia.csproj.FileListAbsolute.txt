@@ -16,3 +16,9 @@ C:\Users\Daniel20\Desktop\Chavez 3\Solution1\Persistencia\obj\Debug\Persistencia
 C:\Users\Daniel20\Desktop\Chavez 3\Solution1\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
 C:\Users\Daniel20\Desktop\Chavez 3\Solution1\Persistencia\obj\Debug\Persistencia.dll
 C:\Users\Daniel20\Desktop\Chavez 3\Solution1\Persistencia\obj\Debug\Persistencia.pdb
+C:\Users\Daniel20\Desktop\Trabajo final cuarto trimestre\Solution1\Persistencia\bin\Debug\Persistencia.dll
+C:\Users\Daniel20\Desktop\Trabajo final cuarto trimestre\Solution1\Persistencia\bin\Debug\Persistencia.pdb
+C:\Users\Daniel20\Desktop\Trabajo final cuarto trimestre\Solution1\Persistencia\obj\Debug\Persistencia.csproj.AssemblyReference.cache
+C:\Users\Daniel20\Desktop\Trabajo final cuarto trimestre\Solution1\Persistencia\obj\Debug\Persistencia.csproj.CoreCompileInputs.cache
+C:\Users\Daniel20\Desktop\Trabajo final cuarto trimestre\Solution1\Persistencia\obj\Debug\Persistencia.dll
+C:\Users\Daniel20\Desktop\Trabajo final cuarto trimestre\Solution1\Persistencia\obj\Debug\Persistencia.pdb
