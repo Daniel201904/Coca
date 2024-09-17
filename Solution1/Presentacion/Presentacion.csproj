@@ -64,6 +64,12 @@
     <Compile Include="Datos_Personales.Designer.cs">
       <DependentUpon>Datos_Personales.cs</DependentUpon>
     </Compile>
+    <Compile Include="Examenes_Medicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Examenes_Medicos.Designer.cs">
+      <DependentUpon>Examenes_Medicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Experiencia.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Datos_Personales.resx">
       <DependentUpon>Datos_Personales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Examenes_Medicos.resx">
+      <DependentUpon>Examenes_Medicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Experiencia.resx">
       <DependentUpon>Experiencia.cs</DependentUpon>

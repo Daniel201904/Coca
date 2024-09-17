@@ -249,5 +249,100 @@ namespace Persistencia
                 comando.Connection = conexion.Cerrar_conexion();
             }
         }
+
+        //Los datos de la cuarta tabla
+        public DataTable Mostar_tabla4()
+        {
+            SqlDataReader leer;
+            DataTable tabla = new DataTable();
+
+            comando.Connection = conexion.Abrir_conexion();
+
+            comando.CommandText = "select * from Medico";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.Cerrar_conexion();
+
+            return tabla;
+        }
+        public void Insertar4(string E_cronica, string Cirugia, string Medicamentos, string Alergia, string Lesiones)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "SP_InsertMedico";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@E_cronica", E_cronica);
+                comando.Parameters.AddWithValue("@Cirugia", Cirugia);
+                comando.Parameters.AddWithValue("@Medicamentos", Medicamentos);
+                comando.Parameters.AddWithValue("@Alergia", Alergia);
+                comando.Parameters.AddWithValue("@Lesiones", Lesiones);
+
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
+
+        public void Cambiar4(int Id_Medico, string E_cronica, string Cirugia, string Medicamentos, string Alergia, string Lesiones)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "SP_UpdateMedico";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@Id_Medico", Id_Medico);
+                comando.Parameters.AddWithValue("@E_cronica", E_cronica);
+                comando.Parameters.AddWithValue("@Cirugia", Cirugia);
+                comando.Parameters.AddWithValue("@Medicamentos", Medicamentos);
+                comando.Parameters.AddWithValue("@Alergia", Alergia);
+                comando.Parameters.AddWithValue("@Lesiones", Lesiones);
+
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
+
+        public void Eliminar4(int Id_Medico)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+
+                comando.CommandText = "DELETE FROM Medico WHERE Id_Medico = @Id_Medico";
+                comando.CommandType = CommandType.Text;
+                comando.Parameters.AddWithValue("@Id_Medico", Id_Medico);
+
+
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
     }
 }

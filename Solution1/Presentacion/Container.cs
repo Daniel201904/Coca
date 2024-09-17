@@ -30,5 +30,12 @@ namespace Presentacion
             CS.Show();
             CS.MdiParent = this;
         }
+
+        private void suExamenToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Examenes_Medicos EX = new Examenes_Medicos();
+            EX.Show();
+            EX.MdiParent = this;
+        }
     }
 }

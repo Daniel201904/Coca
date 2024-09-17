@@ -66,5 +66,25 @@ namespace Negocio
         {
             persona.Eliminar3(Id_cursos);
         }
+
+        //Tabla 4
+        public DataTable Mostrar_Tabla4()
+        {
+            DataTable TB = new DataTable();
+            TB = persona.Mostar_tabla4();
+            return TB;
+        }
+        public void Digitar4(string E_cronica, string Cirugia, string Medicamentos, string Alergia, string Lesiones)
+        {
+            persona.Insertar4(E_cronica, Cirugia, Medicamentos, Alergia, Lesiones);
+        }
+        public void Diferente4(int Id_Medico, string E_cronica, string Cirugia, string Medicamentos, string Alergia, string Lesiones)
+        {
+            persona.Cambiar4(Id_Medico, E_cronica, Cirugia, Medicamentos, Alergia, Lesiones);
+        }
+        public void Borrar4(int Id_Medico)
+        {
+            persona.Eliminar4(Id_Medico);
+        }
     }
 }
