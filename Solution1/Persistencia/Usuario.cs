@@ -156,5 +156,98 @@ namespace Persistencia
                 comando.Connection = conexion.Cerrar_conexion();
             }
         }
+
+        //lOS datos de la tercera tabla
+        public DataTable Mostar_tabla3()
+        {
+            SqlDataReader leer;
+            DataTable tabla = new DataTable();
+
+            comando.Connection = conexion.Abrir_conexion();
+            comando.CommandText = "select * from Cursos";
+            comando.CommandType = CommandType.Text;
+            leer = comando.ExecuteReader();
+            tabla.Load(leer);
+            conexion.Cerrar_conexion();
+
+            return tabla;
+        }
+
+        public void Insertar3(string Centro, string Estudio, string Nivel, string F_inicio, string Estado, string F_final)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "SP__InsertCursos";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@Centro", Centro);
+                comando.Parameters.AddWithValue("@Estudio", Estudio);
+                comando.Parameters.AddWithValue("@Nivel", Nivel);
+                comando.Parameters.AddWithValue("@F_inicio", F_inicio);
+                comando.Parameters.AddWithValue("@Estado", Estado);
+                comando.Parameters.AddWithValue("@F_final", F_final);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
+
+        public void Cambiar3(int Id_cursos, string Centro, string Estudio, string Nivel, string F_inicio, string Estado, string F_final)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+                comando.CommandText = "sp__UpdateCursos";
+                comando.CommandType = CommandType.StoredProcedure;
+
+                comando.Parameters.AddWithValue("@Id_cursos", Id_cursos);
+                comando.Parameters.AddWithValue("@Centro", Centro);
+                comando.Parameters.AddWithValue("@Estudio", Estudio);
+                comando.Parameters.AddWithValue("@Nivel", Nivel);
+                comando.Parameters.AddWithValue("@F_inicio", F_inicio);
+                comando.Parameters.AddWithValue("@Estado", Estado);
+                comando.Parameters.AddWithValue("@F_final", F_final);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
+
+        public void Eliminar3(int Id_cursos)
+        {
+            try
+            {
+                comando.Connection = conexion.Abrir_conexion();
+
+                comando.CommandText = "DELETE FROM Cursos WHERE Id_cursos = @Id_cursos";
+                comando.CommandType = CommandType.Text;
+                comando.Parameters.AddWithValue("@Id_cursos", Id_cursos);
+                comando.ExecuteNonQuery();
+                comando.Parameters.Clear();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                comando.Connection = conexion.Cerrar_conexion();
+            }
+        }
     }
 }

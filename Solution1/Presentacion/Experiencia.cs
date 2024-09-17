@@ -48,7 +48,7 @@ namespace Presentacion
 
         private void BT_cambiar_Click(object sender, EventArgs e)
         {
-            Editar = true;
+                Editar = true;
             TXT_empresa.Text = dataGridView1.CurrentRow.Cells["N_empresa"].Value.ToString();
             TXT_cargo.Text = dataGridView1.CurrentRow.Cells["Cargo"].Value.ToString();
             TXT_area.Text = dataGridView1.CurrentRow.Cells["Area"].Value.ToString();

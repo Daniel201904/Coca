@@ -23,5 +23,12 @@ namespace Presentacion
             XP.Show();
             XP.MdiParent = this;
         }
+
+        private void cursosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursos CS = new Cursos();
+            CS.Show();
+            CS.MdiParent = this;
+        }
     }
 }

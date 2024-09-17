@@ -17,3 +17,23 @@ C:\Users\Daniel20\Desktop\Chavez\Solution1\Presentacion\obj\Debug\Presentacion.c
 C:\Users\Daniel20\Desktop\Chavez\Solution1\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date
 C:\Users\Daniel20\Desktop\Chavez\Solution1\Presentacion\obj\Debug\Presentacion.exe
 C:\Users\Daniel20\Desktop\Chavez\Solution1\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.csproj.AssemblyReference.cache
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.Container.resources
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.Cursos.resources
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.Datos_Personales.resources
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.Experiencia.resources
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.Iniciar_Sesion.resources
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.Perfil_Laboral.resources
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.Properties.Resources.resources
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.exe
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presentacion.pdb
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\bin\Debug\Presentacion.exe.config
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\bin\Debug\Presentacion.exe
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\bin\Debug\Presentacion.pdb
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\bin\Debug\Negocio.dll
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\bin\Debug\Persistencia.dll
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\bin\Debug\Negocio.pdb
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\bin\Debug\Persistencia.pdb
+C:\Users\Daniel20\Desktop\Chavez 2\Solution1\Presentacion\obj\Debug\Presenta.BC77CD05.Up2Date

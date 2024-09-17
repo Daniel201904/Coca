@@ -31,6 +31,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.experienciaDelUsuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.experienciaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursosRealizadosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.cursosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -38,7 +40,8 @@
             // 
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.experienciaDelUsuarioToolStripMenuItem});
+            this.experienciaDelUsuarioToolStripMenuItem,
+            this.cursosRealizadosToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 28);
@@ -56,9 +59,24 @@
             // experienciaToolStripMenuItem
             // 
             this.experienciaToolStripMenuItem.Name = "experienciaToolStripMenuItem";
-            this.experienciaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.experienciaToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
             this.experienciaToolStripMenuItem.Text = "Experiencia ";
             this.experienciaToolStripMenuItem.Click += new System.EventHandler(this.experienciaToolStripMenuItem_Click);
+            // 
+            // cursosRealizadosToolStripMenuItem
+            // 
+            this.cursosRealizadosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cursosToolStripMenuItem});
+            this.cursosRealizadosToolStripMenuItem.Name = "cursosRealizadosToolStripMenuItem";
+            this.cursosRealizadosToolStripMenuItem.Size = new System.Drawing.Size(146, 24);
+            this.cursosRealizadosToolStripMenuItem.Text = "Cursos Realizados ";
+            // 
+            // cursosToolStripMenuItem
+            // 
+            this.cursosToolStripMenuItem.Name = "cursosToolStripMenuItem";
+            this.cursosToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cursosToolStripMenuItem.Text = "Cursos";
+            this.cursosToolStripMenuItem.Click += new System.EventHandler(this.cursosToolStripMenuItem_Click);
             // 
             // Container
             // 
@@ -82,5 +100,7 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem experienciaDelUsuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem experienciaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cursosRealizadosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cursosToolStripMenuItem;
     }
 }
